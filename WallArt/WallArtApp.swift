@@ -20,6 +20,12 @@ struct WallArtApp: App {
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
+                .environment(viewModel)
+        }
+        
+        WindowGroup(id: "doodle_canvas") {
+            DoodleView()
+                .environment(viewModel)
         }
     }
 }
