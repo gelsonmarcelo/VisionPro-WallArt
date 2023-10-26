@@ -20,6 +20,7 @@ struct ImmersiveView: View {
     
     @State private var assistant: Entity? = nil
     @State private var waveAnimation: AnimationResource? = nil
+    @State private var jumpAnimation: AnimationResource? = nil
     
     @State public var showAttachmentButtons = false
     
@@ -70,15 +71,29 @@ struct ImmersiveView: View {
                 guard let waveModel = characterAnimationSceneEntity.findEntity(named: "wave_model") else { return }
                 guard let assistant = characterEntity.findEntity(named: "assistant") else { return }
                 
+                //Finding and getting animations from realityKitContent
+                guard let jumpUpModel = characterAnimationSceneEntity.findEntity(named: "jump_up_model") else { return }
+                guard let jumpFloatModel = characterAnimationSceneEntity.findEntity(named: "jump_float_model") else { return }
+                guard let jumpDownModel = characterAnimationSceneEntity.findEntity(named: "jump_down_model") else { return }
+                
                 guard let idleAnimationResource = assistant.availableAnimations.first else { return }
                 guard let waveAnimationResource = waveModel.availableAnimations.first else { return }
                 let waveAnimation = try AnimationResource.sequence(with: [waveAnimationResource, idleAnimationResource.repeat()])
                 assistant.playAnimation(idleAnimationResource.repeat())
                 
+                guard let jumpUpAnimationResource = jumpUpModel.availableAnimations.first else { return }
+                guard let jumpFloatAnimationResource = jumpFloatModel.availableAnimations.first else { return }
+                guard let jumpDownAnimationResource = jumpDownModel.availableAnimations.first else { return }
+                
+                //Complete animation jumping
+                let jumpAnimation = try AnimationResource.sequence(with: [jumpUpAnimationResource, jumpFloatAnimationResource,
+                    jumpDownAnimationResource, idleAnimationResource.repeat()])
+                
                 //Assign state asynchronously
                 Task {
                     self.assistant = assistant
                     self.waveAnimation = waveAnimation
+                    self.jumpAnimation = jumpAnimation
                 }
             } catch {
                 print("Error in RealityView's make: \(error)")
@@ -138,7 +153,19 @@ struct ImmersiveView: View {
                 case .projectileFlying:
                     break
                 case .updateWallArt:
-                    break
+                    if let plane = planeEntity.findEntity(named: "canvas") as? ModelEntity {
+                        plane.model?.materials = [ImmersiveView.loadImageMaterial(imageUrl: "sketch")]
+                    }
+                    
+                if let assistant = self.assistant, let jumpAnimation = self.jumpAnimation {
+                    Task {
+                        try? await Task.sleep(for: .milliseconds(500))
+                        assistant.playAnimation(jumpAnimation)
+                        await animatePrompText(text: "Awesome!")
+                        try? await Task.sleep(for: .milliseconds(500))
+                        await animatePrompText(text: "What else do you want to see us\n build in Vision Pro at the end?")
+                    }
+                }
             }
         }
     }

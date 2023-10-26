@@ -14,6 +14,7 @@
 		6BA229EA2AE93521001CB0AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA229E92AE93521001CB0AD /* Assets.xcassets */; };
 		6BA229ED2AE93521001CB0AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA229EC2AE93521001CB0AD /* Preview Assets.xcassets */; };
 		6BBC83962AEAB1300037E4F0 /* DoodleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC83952AEAB1300037E4F0 /* DoodleView.swift */; };
+		6BBC83982AEADB620037E4F0 /* sketch.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC83972AEADB620037E4F0 /* sketch.jpeg */; };
 		6BE140922AE936A7009CB61D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE140912AE936A7009CB61D /* ViewModel.swift */; };
 		6BE140952AE93CE9009CB61D /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 6BE140942AE93CE9009CB61D /* RealityKitContent */; };
 		6BE140972AE93E3D009CB61D /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 6BE140962AE93E3D009CB61D /* RealityKitContent */; };
@@ -29,6 +30,7 @@
 		6BA229EC2AE93521001CB0AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6BA229EE2AE93521001CB0AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BBC83952AEAB1300037E4F0 /* DoodleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleView.swift; sourceTree = "<group>"; };
+		6BBC83972AEADB620037E4F0 /* sketch.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sketch.jpeg; path = "../../../Downloads/GenerativeDoodleArt_VisionOS-main/GenerativeWallArt/Resources/Assets.xcassets/sketch.imageset/sketch.jpeg"; sourceTree = "<group>"; };
 		6BE140912AE936A7009CB61D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6BE140982AE94DEF009CB61D /* think_different.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = think_different.png; path = "../../../Downloads/GenerativeDoodleArt_VisionOS-main/GenerativeWallArt/Resources/Assets.xcassets/think_different.imageset/think_different.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 		6BA229DE2AE93520001CB0AD /* WallArt */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC83972AEADB620037E4F0 /* sketch.jpeg */,
 				6BE140982AE94DEF009CB61D /* think_different.png */,
 				6BA229E32AE93520001CB0AD /* WallArtApp.swift */,
 				6BA229E52AE93520001CB0AD /* ContentView.swift */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BA229ED2AE93521001CB0AD /* Preview Assets.xcassets in Resources */,
+				6BBC83982AEADB620037E4F0 /* sketch.jpeg in Resources */,
 				6BE140992AE94DEF009CB61D /* think_different.png in Resources */,
 				6BA229EA2AE93521001CB0AD /* Assets.xcassets in Resources */,
 			);
