@@ -12,6 +12,11 @@ struct WallArtApp: App {
     
     @State private var viewModel = ViewModel()
     
+    init() {
+        ImpactParticleSystem.registerSystem()
+        ProjectileComponent.registerComponent()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B423B532AEBCC2400895B21 /* ImpactParticleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B423B522AEBCC2400895B21 /* ImpactParticleSystem.swift */; };
 		6BA229E22AE93520001CB0AD /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 6BA229E12AE93520001CB0AD /* RealityKitContent */; };
 		6BA229E42AE93520001CB0AD /* WallArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA229E32AE93520001CB0AD /* WallArtApp.swift */; };
 		6BA229E62AE93520001CB0AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA229E52AE93520001CB0AD /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B423B522AEBCC2400895B21 /* ImpactParticleSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactParticleSystem.swift; sourceTree = "<group>"; };
 		6BA229DC2AE93520001CB0AD /* WallArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA229E32AE93520001CB0AD /* WallArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallArtApp.swift; sourceTree = "<group>"; };
 		6BA229E52AE93520001CB0AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				6BA229EB2AE93521001CB0AD /* Preview Content */,
 				6BE140912AE936A7009CB61D /* ViewModel.swift */,
 				6BBC83952AEAB1300037E4F0 /* DoodleView.swift */,
+				6B423B522AEBCC2400895B21 /* ImpactParticleSystem.swift */,
 			);
 			path = WallArt;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				6BA229E62AE93520001CB0AD /* ContentView.swift in Sources */,
 				6BBC83962AEAB1300037E4F0 /* DoodleView.swift in Sources */,
+				6B423B532AEBCC2400895B21 /* ImpactParticleSystem.swift in Sources */,
 				6BA229E42AE93520001CB0AD /* WallArtApp.swift in Sources */,
 				6BE140922AE936A7009CB61D /* ViewModel.swift in Sources */,
 				6BA229E82AE93520001CB0AD /* ImmersiveView.swift in Sources */,
